@@ -6,7 +6,6 @@
 # Multi-Theading Programming.
 
 import time
-from threading import Thread
 import threading
 
 def get_food(c_id):
@@ -29,7 +28,7 @@ if __name__ == "__main__":
     print("======Starting time: " + str(time.ctime()))
 
     for c in range(cust):
-        thread = Thread(target=make_order, args=(c,))
+        thread = threading.Thread(target=make_order, args=(c,))
         thread.start()
 
 
